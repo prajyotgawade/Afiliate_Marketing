@@ -24,7 +24,7 @@ const Navbar = () => {
     { name: "Home", href: "/" },
     { name: "Products", href: "/products" },
     { name: "Reviews", href: "/blog" },
-    { name: "About", href: "/about" },
+    { name: "About", href: "/about-us" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -49,7 +49,7 @@ const Navbar = () => {
                 className="object-cover scale-150" 
               />
             </div>
-            <span className="text-xl md:text-2xl font-bold tracking-tighter text-white uppercase italic">
+            <span className="text-xl md:text-2xl text-white font-logo tracking-wide">
               NEXORA
             </span>
           </Link>

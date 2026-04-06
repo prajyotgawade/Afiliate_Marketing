@@ -17,14 +17,14 @@ const Footer = () => {
                 className="object-cover scale-125" 
               />
             </div>
-            <span className="text-xl font-bold tracking-tight text-white uppercase italic">
+            <span className="text-xl text-white font-logo tracking-wide">
               NEXORA
             </span>
           </div>
           <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-            The world's premium curated tech review and affiliate platform. We
-            bring you the most innovative gadgets with deep insights to help you
-            make the best decisions.
+            NEXORA is a Bangalore-based independent tech curation lab. We 
+            specialize in rigorous, 30-day product evaluation and elite gadget 
+            curation for the modern enthusiast. 
           </p>
           <div className="flex gap-4">
             {[Globe, Mail, Share2].map((Icon, i) => (
@@ -42,7 +42,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-12 flex-1">
           <div className="flex flex-col gap-4">
             <h4 className="text-white font-bold mb-2">Company</h4>
-            {["About Us", "Our Process", "Partners", "Contact"].map((link) => (
+            {["About Us", "Our Process", "Contact"].map((link) => (
               <Link
                 key={link}
                 href={`/${link.toLowerCase().replace(" ", "-")}`}

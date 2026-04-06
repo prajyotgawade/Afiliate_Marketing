@@ -108,31 +108,153 @@ const Hero = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent" />
             
-            {/* Float Card 1 */}
-            <div className="absolute top-10 left-10 p-4 glass rounded-2xl animate-float-slow">
-              <div className="flex items-center gap-3">
-                <div className="p-2 rounded-xl bg-green-500/20 text-green-400">
-                  <ChevronRight size={20} />
+            {/* Floating Reviews (Indian names) */}
+            <motion.div
+              initial={{ opacity: 0, x: -30, scale: 0.8 }}
+              animate={{ 
+                opacity: 1, 
+                x: 0, 
+                scale: 1,
+                y: [0, -12, 0] 
+              }}
+              transition={{ 
+                delay: 1, 
+                duration: 0.6,
+                y: {
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }
+              }}
+              className="absolute -left-12 lg:-left-24 top-10 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[180px] hidden md:block"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-8 h-8 rounded-full border border-white/20 overflow-hidden relative">
+                  <Image src="https://i.pravatar.cc/100?u=rahul" alt="Rahul" fill className="object-cover" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-bold text-zinc-500 uppercase">Verified</div>
-                  <div className="text-white text-sm font-bold leading-none">Best Price Found</div>
+                  <div className="text-[10px] font-bold text-white leading-none">Rahul Sharma</div>
+                  <div className="flex gap-0.5 mt-0.5">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} size={8} className="fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Float Card 2 */}
-            <div className="absolute bottom-20 -right-10 p-5 glass rounded-2xl shadow-2xl animate-float-fast max-w-[220px]">
-              <div className="flex items-center gap-1 mb-2">
-                {[1, 2, 3, 4, 5].map((s) => (
-                  <Star key={s} size={14} className="fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-zinc-300 text-sm font-medium leading-relaxed italic">
-                "Literally saved me $200 on my new desk setup! Best affiliate site out there."
+              <p className="text-[10px] text-zinc-400 leading-tight italic">
+                "Finding genuine tech reviews in India was hard until I found this."
               </p>
-              <div className="mt-2 text-xs font-bold text-white">- Mark J., UX Designer</div>
-            </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30, scale: 0.8 }}
+              animate={{ 
+                opacity: 1, 
+                x: 0, 
+                scale: 1,
+                y: [0, 15, 0] 
+              }}
+              transition={{ 
+                delay: 1.3, 
+                duration: 0.6,
+                y: {
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }
+              }}
+              className="absolute -right-12 lg:-right-24 top-1/2 -translate-y-1/2 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[180px] hidden md:block"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-8 h-8 rounded-full border border-white/20 overflow-hidden relative">
+                  <Image src="https://i.pravatar.cc/100?u=priya" alt="Priya" fill className="object-cover" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-bold text-white leading-none">Priya Patel</div>
+                  <div className="flex gap-0.5 mt-0.5">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} size={8} className="fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-[10px] text-zinc-400 leading-tight italic">
+                "The premium curation is visible in every product they recommend."
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30, scale: 0.8 }}
+              animate={{ 
+                opacity: 1, 
+                x: 0, 
+                scale: 1,
+                y: [0, -8, 0] 
+              }}
+              transition={{ 
+                delay: 1.9, 
+                duration: 0.6,
+                y: {
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }
+              }}
+              className="absolute -right-12 lg:-right-24 top-10 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[180px] hidden lg:block"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-8 h-8 rounded-full border border-white/20 overflow-hidden relative">
+                  <Image src="https://i.pravatar.cc/100?u=ananya" alt="Ananya" fill className="object-cover" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-bold text-white leading-none">Ananya Singh</div>
+                  <div className="flex gap-0.5 mt-0.5">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} size={8} className="fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-[10px] text-zinc-400 leading-tight italic">
+                "Finally, a site that actually tests what they sell!"
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.8 }}
+              animate={{ 
+                opacity: 1, 
+                y: [0, -10, 0], 
+                scale: 1 
+              }}
+              transition={{ 
+                delay: 1.6, 
+                duration: 0.6,
+                y: {
+                  duration: 4.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }
+              }}
+              className="absolute -left-8 lg:-left-16 bottom-10 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[180px] hidden lg:block"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-8 h-8 rounded-full border border-white/20 overflow-hidden relative">
+                  <Image src="https://i.pravatar.cc/100?u=amit" alt="Amit" fill className="object-cover" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-bold text-white leading-none">Amit Gupta</div>
+                  <div className="flex gap-0.5 mt-0.5">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} size={8} className="fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-[10px] text-zinc-400 leading-tight italic">
+                "Saved me thousands on my new home office setup. Pure gold!"
+              </p>
+            </motion.div>
           </div>
           
           {/* Decorative shapes behind */}
