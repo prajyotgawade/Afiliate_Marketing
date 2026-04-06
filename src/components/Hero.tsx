@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center pt-24 pb-20 px-6 lg:px-12 overflow-hidden bg-gradient-premium">
+    <section className="relative w-full min-h-screen flex items-center justify-center pt-24 pb-20 px-6 lg:px-12 overflow-hidden bg-transparent">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 blur-[120px] rounded-full animate-pulse" />
@@ -100,7 +100,7 @@ const Hero = () => {
         >
           <div className="relative z-10 w-full aspect-square rounded-[3rem] overflow-hidden border-2 border-white/10 rotate-3 transform-style-3d hover:rotate-0 transition-transform duration-700">
             <Image
-              src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=1000"
+              src="/hero-main.jpg"
               alt="Premium Tech"
               fill
               className="object-cover"

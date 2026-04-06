@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Globe, Mail, Share2, ArrowRight } from "lucide-react";
 
 const Footer = () => {
@@ -7,12 +8,17 @@ const Footer = () => {
     <footer className="w-full bg-black py-20 px-6 border-t border-zinc-900">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 lg:gap-32">
         <div className="max-w-sm flex-1">
-          <div className="flex items-center gap-2 mb-6">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary to-secondary flex items-center justify-center font-bold text-lg">
-              A
+          <div className="flex items-center gap-3 mb-6">
+            <div className="relative w-10 h-10 overflow-hidden rounded-lg">
+              <Image 
+                src="/logo-new.png" 
+                alt="NEXORA Logo" 
+                fill 
+                className="object-cover scale-125" 
+              />
             </div>
-            <span className="text-xl font-bold tracking-tight text-white">
-              AuraAffiliate
+            <span className="text-xl font-bold tracking-tight text-white uppercase italic">
+              NEXORA
             </span>
           </div>
           <p className="text-zinc-500 text-sm leading-relaxed mb-8">
@@ -52,7 +58,7 @@ const Footer = () => {
               (link) => (
                 <Link
                   key={link}
-                  href="#"
+                  href={`/${link.toLowerCase().replace(/ /g, "-")}`}
                   className="text-zinc-500 hover:text-white transition-colors text-sm"
                 >
                   {link}
@@ -80,17 +86,17 @@ const Footer = () => {
       </div>
 
       <div className="max-w-7xl mx-auto pt-16 mt-16 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-6 text-zinc-700 text-xs">
-        <p>© 2026 AuraAffiliate. All rights reserved.</p>
+        <p>© 2026 NEXORA. All rights reserved.</p>
         <div className="flex gap-8">
-          <a href="#" className="hover:text-zinc-400 transition-colors">
+          <Link href="/cookie-policy" className="hover:text-zinc-400 transition-colors">
             Cookie Policy
-          </a>
-          <a href="#" className="hover:text-zinc-400 transition-colors">
+          </Link>
+          <Link href="/security" className="hover:text-zinc-400 transition-colors">
             Security
-          </a>
-          <a href="#" className="hover:text-zinc-400 transition-colors">
+          </Link>
+          <Link href="/disclosure" className="hover:text-zinc-400 transition-colors">
             Disclosure
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

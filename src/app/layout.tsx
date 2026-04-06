@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AuraAffiliate | Curated Premium Tech & Lifestyle Gear",
+  title: "NEXORA | Curated Premium Tech & Lifestyle Gear",
   description: "Discover expertly reviewed gadgets, premium lifestyle gear, and the best deals across the web. Hand-picked for the modern enthusiast.",
 };
 
@@ -27,7 +27,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-black">
+        {/* Fixed Background for Scroll-Safe Gradients */}
+        <div className="fixed inset-0 z-0 bg-gradient-premium pointer-events-none" />
+        <div className="relative z-10 w-full overflow-x-hidden">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

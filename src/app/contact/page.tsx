@@ -39,7 +39,7 @@ const ContactPage = () => {
               
               <div className="flex flex-col gap-8">
                  {[
-                   { icon: <Mail />, label: "Email", value: "hello@auraaffiliate.com" },
+                   { icon: <Mail />, label: "Email", value: "hello@nexora.com" },
                    { icon: <Globe />, label: "Location", value: "San Francisco, CA" },
                    { icon: <MessageSquare />, label: "Support", value: "Online 24/7" },
                  ].map((item, i) => (

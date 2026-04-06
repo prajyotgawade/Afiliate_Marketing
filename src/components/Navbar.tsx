@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Search, Menu, X, ShoppingCart, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -31,17 +32,25 @@ const Navbar = () => {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-12",
-          isScrolled ? "py-4 glass-dark" : "py-8 bg-transparent"
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-4 md:px-6 lg:px-12",
+          isScrolled ? "py-4" : "py-8"
         )}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className={cn(
+          "max-w-7xl mx-auto flex items-center justify-between transition-all duration-500",
+          isScrolled ? "backdrop-blur-md px-4 py-2" : ""
+        )}>
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center font-bold text-xl">
-              A
+            <div className="relative w-10 md:w-12 h-10 md:h-12 overflow-hidden rounded-xl">
+              <Image 
+                src="/logo-new.png" 
+                alt="NEXORA Logo" 
+                fill 
+                className="object-cover scale-150" 
+              />
             </div>
-            <span className="text-2xl font-bold tracking-tighter text-gradient">
-              AuraAffiliate
+            <span className="text-xl md:text-2xl font-bold tracking-tighter text-white uppercase italic">
+              NEXORA
             </span>
           </Link>
 
@@ -87,10 +96,10 @@ const Navbar = () => {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 right-0 glass-dark border-t border-zinc-800 p-6 md:hidden flex flex-col gap-6"
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              className="absolute top-[calc(100%+10px)] left-4 right-4 glass-dark border border-white/10 rounded-[2.5rem] p-8 md:hidden flex flex-col gap-6 shadow-3xl pointer-events-auto"
             >
               {navLinks.map((link) => (
                 <Link

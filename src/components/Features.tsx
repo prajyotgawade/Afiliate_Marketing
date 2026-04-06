@@ -42,7 +42,7 @@ const Features = () => {
             viewport={{ once: true }}
             className="text-3xl lg:text-5xl font-bold text-white mb-6"
           >
-            Why trust <span className="text-gradient-primary">AuraAffiliate?</span>
+            Why trust <span className="text-gradient-primary">NEXORA?</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

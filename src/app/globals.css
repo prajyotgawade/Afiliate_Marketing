@@ -74,8 +74,11 @@ body {
 }
 
 .bg-gradient-premium {
-  background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, rgba(3, 3, 3, 0) 70%),
-              radial-gradient(circle at 0% 100%, rgba(236, 72, 153, 0.1) 0%, rgba(3, 3, 3, 0) 50%);
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(0, 242, 254, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(79, 172, 254, 0.05) 0%, transparent 50%),
+    #000000;
+  background-attachment: fixed;
 }
 
 .hover-glow {
