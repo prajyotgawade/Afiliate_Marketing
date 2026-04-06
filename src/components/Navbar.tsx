@@ -99,7 +99,7 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              className="absolute top-[calc(100%+10px)] left-4 right-4 glass-dark border border-white/10 rounded-[2.5rem] p-8 md:hidden flex flex-col gap-6 shadow-3xl pointer-events-auto"
+              className="absolute top-[calc(100%+10px)] left-4 right-4 bg-zinc-950/95 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 md:hidden flex flex-col gap-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-[60] pointer-events-auto"
             >
               {navLinks.map((link) => (
                 <Link

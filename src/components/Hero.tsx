@@ -93,10 +93,10 @@ const Hero = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, x: 50, scale: 0.8 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ delay: 0.5, duration: 1, type: "spring", stiffness: 50 }}
-          className="relative perspective-1000 hidden lg:block"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="flex-1 relative w-full max-w-[500px] mx-auto lg:mx-0 mt-20 lg:mt-0"
         >
           <div className="relative z-10 w-full aspect-square rounded-[3rem] overflow-hidden border-2 border-white/10 rotate-3 transform-style-3d hover:rotate-0 transition-transform duration-700">
             <Image
