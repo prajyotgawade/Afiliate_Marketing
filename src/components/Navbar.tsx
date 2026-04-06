@@ -38,7 +38,7 @@ const Navbar = () => {
       >
         <div className={cn(
           "max-w-7xl mx-auto flex items-center justify-between transition-all duration-500",
-          isScrolled ? "backdrop-blur-md px-4 py-2" : ""
+          isScrolled ? "backdrop-blur-md bg-black/50 px-4 py-2" : ""
         )}>
           <Link href="/" className="flex items-center gap-2">
             <div className="relative w-10 md:w-12 h-10 md:h-12 overflow-hidden rounded-xl">
@@ -92,14 +92,27 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Backdrop */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] md:hidden"
+            />
+          )}
+        </AnimatePresence>
+
+        {/* Mobile Menu Content */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, y: -20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              className="absolute top-[calc(100%+10px)] left-4 right-4 bg-zinc-950/95 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 md:hidden flex flex-col gap-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-[60] pointer-events-auto"
+              className="absolute top-[calc(100%+10px)] left-4 right-4 bg-zinc-950/95 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 md:hidden flex flex-col gap-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-[60] pointer-events-auto max-h-[80vh] overflow-y-auto custom-scrollbar"
             >
               {navLinks.map((link) => (
                 <Link

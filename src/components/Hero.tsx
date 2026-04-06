@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center pt-24 pb-20 px-6 lg:px-12 overflow-hidden bg-transparent">
+    <section className="relative w-full min-h-screen flex items-center justify-center pt-32 pb-20 px-6 lg:px-12 overflow-hidden bg-transparent">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 blur-[120px] rounded-full animate-pulse" />
@@ -126,7 +126,7 @@ const Hero = () => {
                   ease: "easeInOut"
                 }
               }}
-              className="absolute -left-12 lg:-left-24 top-10 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[180px] hidden md:block"
+              className="absolute left-2 sm:-left-12 lg:-left-24 top-4 sm:top-10 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[150px] sm:max-w-[180px] scale-75 sm:scale-100 origin-top-left"
             >
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-8 h-8 rounded-full border border-white/20 overflow-hidden relative">
@@ -163,7 +163,7 @@ const Hero = () => {
                   ease: "easeInOut"
                 }
               }}
-              className="absolute -right-12 lg:-right-24 top-1/2 -translate-y-1/2 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[180px] hidden md:block"
+              className="absolute right-2 sm:-right-12 lg:-right-24 top-1/2 -translate-y-1/2 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[150px] sm:max-w-[180px] scale-75 sm:scale-100 origin-right"
             >
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-8 h-8 rounded-full border border-white/20 overflow-hidden relative">
@@ -200,7 +200,7 @@ const Hero = () => {
                   ease: "easeInOut"
                 }
               }}
-              className="absolute -right-12 lg:-right-24 top-10 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[180px] hidden lg:block"
+              className="absolute right-2 sm:-right-12 lg:-right-24 top-4 sm:top-10 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[150px] sm:max-w-[180px] scale-75 sm:scale-100 origin-top-right"
             >
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-8 h-8 rounded-full border border-white/20 overflow-hidden relative">
@@ -236,7 +236,7 @@ const Hero = () => {
                   ease: "easeInOut"
                 }
               }}
-              className="absolute -left-8 lg:-left-16 bottom-10 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[180px] hidden lg:block"
+              className="absolute left-2 sm:-left-8 lg:-left-16 bottom-4 sm:bottom-10 p-4 glass rounded-2xl shadow-2xl z-20 max-w-[150px] sm:max-w-[180px] scale-75 sm:scale-100 origin-bottom-left"
             >
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-8 h-8 rounded-full border border-white/20 overflow-hidden relative">
